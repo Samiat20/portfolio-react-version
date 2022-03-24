@@ -17,9 +17,9 @@ const projects= [
   }
 ]
 
-function App() {
+function App()  {
   return (
-    <div className="App">
+    <div className="App wrapper">
       <Banner/>
       <Title name='About Me'/>
       <p>
@@ -30,8 +30,12 @@ function App() {
            It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
          The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
     </p>
+    <section>
     <Title name= "Projects"/>
+    <div className='projects'> 
       {projects.map ((project)=> <Card details = {project}/>)}
+      </div>
+      </section>
     </div>
   );
 }
